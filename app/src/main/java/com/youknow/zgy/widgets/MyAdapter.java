@@ -9,22 +9,23 @@ import android.widget.TextView;
 class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private String[] mDataSet;
 
-    static class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView mTextView;
+
         ViewHolder(View v) {
             super(v);
-            mTextView = (TextView)v.findViewById(R.id.my_text);
+            mTextView = (TextView) v.findViewById(R.id.my_text);
         }
     }
 
-    MyAdapter(String[] mDataSet){
+    MyAdapter(String[] mDataSet) {
         this.mDataSet = mDataSet;
     }
 
     @Override
-    public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,int viewType){
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_text_view,parent,false);
+    public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_text_view, parent, false);
         return new ViewHolder(v);
     }
 
