@@ -19,7 +19,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
 
     public MyAdapter(String[] mDataset){
-        mDataset = mDataset;
+        this.mDataset = mDataset;
     }
 
     @Override
