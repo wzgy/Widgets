@@ -12,9 +12,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
         public TextView mTextView;
-        public ViewHolder(TextView v) {
+        public ViewHolder(View v) {
             super(v);
-            mTextView = v;
+            mTextView = (TextView)v.findViewById(R.id.my_text);
         }
     }
 
@@ -25,8 +25,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,int viewType){
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_text_view,parent,false);
-        TextView tv=(TextView)v.findViewById(R.id.my_text);
-        return new ViewHolder(tv);
+        return new ViewHolder(v);
     }
 
     @Override
