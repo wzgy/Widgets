@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-    private String[] mDataset;
+    private String[] mDataSet;
 
     static class ViewHolder extends RecyclerView.ViewHolder{
 
@@ -18,8 +18,8 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         }
     }
 
-    MyAdapter(String[] mDataset){
-        this.mDataset = mDataset;
+    MyAdapter(String[] mDataSet){
+        this.mDataSet = mDataSet;
     }
 
     @Override
@@ -30,11 +30,11 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.mTextView.setText(mDataset[position]);
+        holder.mTextView.setText(mDataSet[position]);
     }
 
     @Override
     public int getItemCount() {
-        return mDataset.length;
+        return mDataSet.length;
     }
 }

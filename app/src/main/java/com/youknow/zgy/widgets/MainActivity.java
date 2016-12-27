@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        String[] myDataset={"abc","def"};
-        RecyclerView.Adapter mAdapter = new MyAdapter(myDataset);
+        String[] myDataSet={"abc","def"};
+        RecyclerView.Adapter mAdapter = new MyAdapter(myDataSet);
         mRecyclerView.setAdapter(mAdapter);
     }
 }
