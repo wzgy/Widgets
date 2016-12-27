@@ -6,19 +6,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
+class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private String[] mDataset;
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder{
 
-        public TextView mTextView;
-        public ViewHolder(View v) {
+        TextView mTextView;
+        ViewHolder(View v) {
             super(v);
             mTextView = (TextView)v.findViewById(R.id.my_text);
         }
     }
 
-    public MyAdapter(String[] mDataset){
+    MyAdapter(String[] mDataset){
         this.mDataset = mDataset;
     }
 
