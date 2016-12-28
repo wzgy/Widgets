@@ -1,4 +1,4 @@
-package com.youknow.zgy.widgets;
+package ml.wzgy.widgets;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
